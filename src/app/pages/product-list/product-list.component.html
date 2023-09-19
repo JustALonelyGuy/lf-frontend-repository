@@ -1,12 +1,57 @@
-
-<mat-paginator #paginator
-               class="demo-paginator"
-               (page)="handlePage($event)"
-               [length]="length"
-               [pageSize]="pageSize"
-               [showFirstLastButtons]="showFirstLastButtons"
-               [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
-               [hidePageSize]="hidePageSize"
-               [pageIndex]="pageIndex"
-               aria-label="Select page">
-</mat-paginator>
+<div class="container-fluid">
+  <div class="row pb-5">
+    <div class="col-md-3">
+      <div class="pt-5">
+      <h4 class="">Filter</h4>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Enter a value" value="">
+          </mat-form-field>
+        </form>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label" for="flexCheckChecked">
+            Checked checkbox
+          </label>
+        </div>
+        Price Range
+        <mat-slider min="1" max="5" step="0.5" value="1.5">
+          <input matSliderThumb>
+        </mat-slider>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <mat-paginator #paginator
+                     class="demo-paginator"
+                     (page)="handlePage($event)"
+                     [length]="length"
+                     [pageSize]="pageSize"
+                     [showFirstLastButtons]="showFirstLastButtons"
+                     [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+                     [hidePageSize]="hidePageSize"
+                     [pageIndex]="pageIndex"
+                     aria-label="Select page">
+      </mat-paginator>
+      <div class="row border rounded">
+        <div class="col p-5" *ngFor="let product of products">
+          <div class="card" style="width: 14rem;">
+            <img class="card-img-top" src="../../../assets/images/logo.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">{{product.description}}</p>
+              <p class="card-text">RM {{product.price}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

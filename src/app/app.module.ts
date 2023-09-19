@@ -8,19 +8,29 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { HomeComponent } from './pages/home/home.component';
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { HttpClientModule} from "@angular/common/http";
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { NavbarComponent } from './fragment/navbar/navbar.component';
+import {NgOptimizedImage} from "@angular/common";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage,
+    MatSliderModule,
+    MatInputModule
 
   ],
   providers: [],

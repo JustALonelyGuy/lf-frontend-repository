@@ -22,6 +22,17 @@ export class ProductListComponent implements OnInit {
 
   pageEvent?: PageEvent;
 
+  products:any[] = [
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+    {name:'testingggg',price:1233333,description:'hello,'},
+  ]
+
   constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
