@@ -5,6 +5,24 @@
 
 .intro{
   /*background-color: #c9c9c9;*/
+  background-image:url('../../../assets/images/background-image-2.jpeg');
+  background-blend-mode: lighten;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.secondary-section img{
+  background-image:url('../../../assets/images/background-image-3.jpeg');
+  background-blend-mode: lighten;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.third-section{
+  background-image:url('../../../assets/images/background-image-4.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title-text{
@@ -31,4 +49,21 @@
 
 .footer-title{
   font-size:15px;
+}
+
+
+.vh-70{
+  height:70vh;
+}
+
+.vh-80{
+  height:80vh;
+}
+
+.about-us-card{
+  color:#861515;
+  border:5px solid #861515;
+  background-color:rgba(255,255,255,0.5);
+  font-weight:700;
+  font-size:30px;
 }
