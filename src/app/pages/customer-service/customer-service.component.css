@@ -83,6 +83,15 @@ i{
     background-position 0s 0.3s; /*change after the size immediately*/
 }
 
+.selected-tab{
+  display: inline-block;
+  padding-bottom:2px;
+  background-image: linear-gradient(#861515 0 0);
+  background-position: 100% 100%; /*OR bottom left*/
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+}
+
 .underline:hover{
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 3px;
