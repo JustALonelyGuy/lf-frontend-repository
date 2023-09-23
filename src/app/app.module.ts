@@ -14,6 +14,8 @@ import {NgOptimizedImage} from "@angular/common";
 import {MatSliderModule} from "@angular/material/slider";
 import {MatInputModule} from "@angular/material/input";
 import {IvyCarouselModule} from "angular-responsive-carousel";
+import { CustomerServiceComponent } from './pages/customer-service/customer-service.component';
+import { FooterComponent } from './fragment/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import {IvyCarouselModule} from "angular-responsive-carousel";
     HomeComponent,
     AboutUsComponent,
     NavbarComponent,
+    CustomerServiceComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
