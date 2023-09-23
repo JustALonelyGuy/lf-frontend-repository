@@ -1,3 +1,9 @@
+button{
+  border:0;
+  outline:0;
+  background-color:transparent;
+}
+
 .title{
   font-size:40px;
   font-weight:600;
@@ -6,16 +12,20 @@
 
 .img-container{
   background-color:#EAEAEA;
-  padding:50px;
+  padding:20px;
 }
 
 h4{
-  font-size:25px;
+  font-size:20px;
   font-weight:600;
 }
 
-.vh-80{
-  height:80vh;
+h5{
+  font-size:20px;
+}
+
+.vh-70{
+  min-height:70vh;
 }
 
 .whatsapp-icon {
@@ -23,6 +33,63 @@ h4{
   right: 30px; bottom: 50px;
   width: 50px;
   height:50px;
-  background-color: rgba(56, 41, 41, 0.05);
   padding: 5px;
+}
+
+.submit-btn{
+  color:#861515;
+  border:1px solid #861515;
+  border-radius:15px;
+}
+
+
+.submit-btn:hover{
+  transition:1s ease-in-out;
+  color:white;
+  background-color:#861515;
+}
+
+i{
+  font-size:28px;
+}
+
+.form-info-title{
+  font-weight:500;
+  font-size:15px;
+  padding-left:5px;
+}
+
+.form-left{
+
+}
+
+.form-right{
+  background-color:#8b8b8b;
+}
+
+.form-left{
+  background-color: #EAEAEA;
+}
+
+.underline {
+  display: inline-block;
+  padding-bottom:2px;
+  background-image: linear-gradient(#861515 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+.underline:hover{
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 3px;
+}
+
+
+.panel-btn:hover .underline{
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 3px;
 }
