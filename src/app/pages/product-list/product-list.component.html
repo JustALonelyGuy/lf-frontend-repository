@@ -40,7 +40,7 @@
                      aria-label="Select page">
       </mat-paginator>
       <div class="row border rounded">
-        <div class="col p-5" *ngFor="let product of products">
+        <div class="col p-5" *ngFor="let product of products$ | async">
           <div class="card" style="width: 14rem;">
             <img class="card-img-top" src="../../../assets/images/logo.png" alt="Card image cap">
             <div class="card-body">

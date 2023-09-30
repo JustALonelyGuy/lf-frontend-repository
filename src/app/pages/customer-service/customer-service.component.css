@@ -102,3 +102,7 @@ i{
   background-position: 100% 100%; /*OR bottom right*/
   background-size: 100% 3px;
 }
+
+.tnc-subtitle{
+  font-weight:500;
+}

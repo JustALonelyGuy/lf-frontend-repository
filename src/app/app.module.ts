@@ -16,6 +16,8 @@ import {MatInputModule} from "@angular/material/input";
 import {IvyCarouselModule} from "angular-responsive-carousel";
 import { CustomerServiceComponent } from './pages/customer-service/customer-service.component';
 import { FooterComponent } from './fragment/footer/footer.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import { FooterComponent } from './fragment/footer/footer.component';
     NavbarComponent,
     CustomerServiceComponent,
     FooterComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,10 @@ import { FooterComponent } from './fragment/footer/footer.component';
     HttpClientModule,
     NgOptimizedImage,
     MatSliderModule,
-    MatInputModule,IvyCarouselModule
+    MatInputModule,
+    IvyCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

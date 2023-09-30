@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PageEvent} from "@angular/material/paginator";
 import {ProductService} from "../../core/product/product.service";
 import {HttpParams} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-product-list',
@@ -33,11 +34,13 @@ export class ProductListComponent implements OnInit {
     {name:'testingggg',price:1233333,description:'hello,'},
   ]
 
+  products$:Observable<any> = new Observable<any>();
+
   constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
-    this.productService.findAll({params:new HttpParams().set("page",1).set("size",5),observe:'response'})
-      .subscribe(res=>console.log(res));
+    //this.productService.findAll({params:new HttpParams().set("page",1).set("size",5)});
+    this.products$ = this.productService.findAll(new HttpParams().set("page",0).set("size",5));
   }
 
   handlePage(event:PageEvent){

@@ -1,1 +1,204 @@
-<p>about-us works!</p>
+<div class="container-fluid">
+  <!--  <div class="row">-->
+  <!--    <section>-->
+  <!--      <div class= 'container'>-->
+  <!--        <div class="container_content">-->
+  <!--          <div class="container_content_inner">-->
+  <!--            <div class="title">-->
+  <!--              <h1>Welcome</h1>-->
+  <!--            </div>-->
+  <!--            <div class="par">-->
+  <!--              <p>-->
+  <!--                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae perferendis eos provident vitae iste.-->
+  <!--              </p>-->
+  <!--            </div>-->
+  <!--            <div class="btns">-->
+  <!--              <button class='btns_more'><a href="#" class="btns_2"> See more </a></button>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <div class="container_outer_img">-->
+  <!--          <div class="img-inner">-->
+  <!--            <img src='./assets/images/logo.png'  alt="" class="container_img"/>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="overlay"></div>-->
+  <!--    </section>-->
+  <!--  </div>-->
+  <section class="row vh-100 intro">
+<!--    <div class="col-md-6">-->
+<!--      <div class="d-flex h-100 ps-5 align-items-center">-->
+<!--    <div>-->
+    <div class="container">
+      <div class="left" data-aos="fade-right" data-aos-duration="3000">
+        <div class="content">
+          <h3 class="title">About Us</h3>
+        </div>
+      </div>
+      <div class="right" data-aos="fade-left" data-aos-duration="3000">
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia assumenda dolore reprehenderit ullam blanditiis ex sapiente pariatur tempore incidunt facilis?</p>
+        </div>
+      </div>
+    </div>
+<!--    </div>-->
+<!--        <div data-aos="fade-down" data-aos-duration="3000">-->
+<!--          <h1 class="red title py-3" >Welcome</h1>-->
+<!--          <div class="red">-->
+<!--            <p class="py-3 title-text">-->
+<!--              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae <br />perferendis eos provident vitae iste.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <button class='btn red see-more-btn'>See more</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-6">-->
+<!--      <div class="d-flex h-100 justify-content-center align-items-center" data-aos="fade-left" data-aos-duration="3000">-->
+<!--        <img src="../../../assets/images/logo.png" class="img-fluid" width="500" height="500" alt="about-us" data-aos="fade-right" data-aos-duration="4000"/>-->
+<!--      </div>-->
+<!--    </div>-->
+  </section>
+  <section class="vh-80 third-section row">
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="w-25 h-50 d-flex justify-content-center align-items-center about-us-card" data-aos="zoom-in" data-aos-duration="2000">
+        <h3 class="h3">Construction & Painting Service</h3>
+      </div>
+      <div class="w-25 h-50 d-flex justify-content-center align-items-center about-us-card" data-aos="zoom-in" data-aos-duration="2000">
+        <h3 class="h3">Shop Online</h3>
+      </div>
+      <div class="w-25 h-50 d-flex justify-content-center align-items-center about-us-card" data-aos="zoom-in" data-aos-duration="2000">
+        <h3 class="h3">Get your interior designed</h3>
+      </div>
+    </div>
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="w-25 h-50 d-flex justify-content-center align-items-center about-us-card" data-aos="zoom-in" data-aos-duration="2000">
+        <h3 class="h3">Locations</h3>
+      </div>
+      <div class="w-25 h-50 d-flex justify-content-center align-items-center about-us-card" data-aos="zoom-in" data-aos-duration="2000">
+        <h3 class="h3">Customer Service</h3>
+      </div>
+    </div>
+    <!--    <div class="row">-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+    <!--        <div class="card">-->
+    <!--          Hi-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+    <!--        <div class="card">-->
+    <!--          ...-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+    <!--        <div class="card">-->
+    <!--          ...-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    <div class="row">-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+    <!--        <div class="card">-->
+    <!--          Hi-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+
+    <!--      </div>-->
+    <!--      <div class="col-md-4 col-sm-4 col-12">-->
+    <!--        <div class="card">-->
+    <!--          <div class="card-body">-->
+    <!--            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+  </section>
+  <section class="row py-5">
+    <carousel [autoplay]="true"  [autoplayInterval]="2000" [cellWidth]="300" [loop]="true">
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/3M_wordmark.svg.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/2560px-Energizer_Logo.svg.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/06397a037bd7576a70d82735483b56f7.jpeg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/ARALDITE.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/ARROW.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/HARDEX.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/irwin-logo-300px.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/JOTUN.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/Kaercher_Logo_2015.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/logo-dunlop-seo.jpg">
+      </div><div class="carousel-cell" style="height:200px;">
+      <img src="../../../assets/images/Logo-Milwaukee.jpg">
+    </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src=".../../../assets/images/Logo_Sika_AG.svg.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/Master-logo-Gere-03.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/Midea_Logo_RGB_blue_on_white_NoRegister.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/NIETZ.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/NIPPON.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/og-total-my.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/SANCORA.jpg">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/StGuchi logo.png">
+      </div>
+      <div class="carousel-cell" style="height:200px;">
+        <img src="../../../assets/images/tsunami.png">
+      </div>
+      <div class="carousel-cell" style="height:250px;">
+        <img src="../../../assets/images/YALE.jpeg">
+      </div>
+    </carousel>
+  </section>
+  <!--  <section class="row vh-100">-->
+  <!--    <div class="col-md-6 h-100">-->
+  <!--      <div class="d-flex justify-content-center align-items-center">-->
+  <!--        <img src="./assets/images/background-image-4.jpeg" class="img-thumbnail" width="500" height="500" alt="about-us" data-aos="fade-right" data-aos-duration="4000"/>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="col-md-6 h-100">-->
+  <!--      <div data-aos="fade-left" data-aos-duration="1500">-->
+  <!--        <h2 class="title mb-5">About Us</h2>-->
+  <!--      </div>-->
+  <!--      <div data-aos="fade-left" data-aos-duration="3000">-->
+  <!--        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eius molestiae perferendis eos provident vitae iste.</p>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </section>-->
+
+
+</div>
+
