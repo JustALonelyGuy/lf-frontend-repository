@@ -39,7 +39,7 @@ export class CheckoutComponent implements OnInit {
       items:[
         {name:"123",category:"entertainment",amount:500,sku:"2132"}
       ]
-    },new HttpParams().set("paymentMethod",this.selectedPaymentMethod).set("bankCode",this.selectedBank.code))).catch(err=>err);
+    },new HttpParams().set("paymentMethod",this.selectedPaymentMethod).set("bankCode",this.selectedBank?.code ))).catch(err=>err);
 
     window.open(response.authorize_uri);
   }
