@@ -1,0 +1,68 @@
+
+
+        <form [formGroup]="loginForm">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start my-4">
+            <p class="lead fw-normal mb-0 me-3">Login to your account</p>
+<!--            <button type="button" class="btn btn-primary btn-floating mx-1">-->
+<!--              <i class="fab fa-facebook"></i>-->
+<!--            </button>-->
+
+<!--            <button type="button" class="btn btn-primary btn-floating mx-1">-->
+<!--              <i class="fab fa-twitter"></i>-->
+<!--            </button>-->
+
+<!--            <button type="button" class="btn btn-primary btn-floating mx-1">-->
+<!--              <i class="fab fa-github"></i>-->
+<!--            </button>-->
+          </div>
+
+<!--          <div class="divider d-flex align-items-center my-4">-->
+<!--            <p class="text-center fw-bold mx-3 mb-0">OR</p>-->
+<!--          </div>-->
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+              <mat-label>Username</mat-label>
+              <input type="text" matInput formControlName="username"
+                     placeholder="Enter your username">
+              <mat-error *ngIf="username?.hasError('required')">
+                          Username is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+              <mat-label>Username</mat-label>
+              <input type="password" matInput formControlName="password"
+                     placeholder="Enter your username">
+              <mat-error *ngIf="password?.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Remember me
+              </label>
+            </div>
+            <a href="#!" class="text-body" routerLink="/forgot-password">Forgot password?</a>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button [disabled]="isButtonLoading" mat-raised-button color="primary" class="float-end" (click)="login($event)">
+              <span *ngIf="isButtonLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Register</button>
+<!--            <button [disabled]="isButtonLoading" class="btn btn-primary py-2 float-end" (click)="login($event)">-->
+<!--              <span *ngIf="isButtonLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>-->
+<!--              Sign in</button>-->
+
+            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a
+                                                                              class="link-danger" [routerLink]="['/account-registration']">Register</a></p>
+          </div>
+        </form>

@@ -1,0 +1,14 @@
+li{
+  list-style-type: none;
+}
+
+
+ul,li{
+  padding:0;
+  margin:0;
+}
+
+.mat-expansion-panel{
+  margin:20px 0;
+}
+

@@ -1,0 +1,17 @@
+
+.container{
+
+
+}
+
+
+.text-center{
+
+}
+
+.form-control{
+  border-radius:0;
+  border: none;
+  border-bottom: 1px solid #555;
+
+}

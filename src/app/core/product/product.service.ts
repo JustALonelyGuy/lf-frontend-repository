@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class ProductService{
 
-  private baseUrl = `${environment.apiUrl}/products`
+  private baseUrl = '/api/v1/products';
 
   constructor(private httpClient:HttpClient,private ngZone:NgZone) {}
 
@@ -38,8 +38,8 @@ export class ProductService{
   //   //return this.httpClient.get(this.baseUrl,options);
   // }
 
-  findAll(params:HttpParams){
-    return this.httpClient.get(this.baseUrl,{params:params});
+  findAll(options?:object){
+    return this.httpClient.get(this.baseUrl,options);
   }
 
 }

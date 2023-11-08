@@ -1,0 +1,163 @@
+<!--<div class="container-fluid">-->
+
+<!--  <div class="card-body p-4 p-md-5">-->
+<!--    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>-->
+    <form [formGroup]="registrationForm">
+      <div class="row mb-2">
+        <div class="col-md-12">
+          <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+            <mat-label>Username</mat-label>
+            <input type="email" matInput formControlName="username"
+                   placeholder="Enter your username">
+                    <mat-error *ngIf="username?.hasError('required')">
+                      Username is <strong>required</strong>
+                    </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div formGroupName="profile">
+        <div class="row mb-2">
+          <div class="col-md-6">
+            <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="email_address"
+                     placeholder="Enter your email address">
+                      <mat-hint>Errors appear instantly!</mat-hint>
+                      <mat-error *ngIf="email?.hasError('email') && !email?.hasError('required')">
+                        Please enter a valid email address
+                      </mat-error>
+                      <mat-error *ngIf="email?.hasError('required')">
+                        Email is <strong>required</strong>
+                      </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+              <mat-label>Phone number</mat-label>
+              <input type="email" matInput formControlName="phone_number"
+                     placeholder="Enter your phone number">
+                      <mat-error *ngIf="phoneNumber?.hasError('required')">
+                        Phone number is <strong>required</strong>
+                      </mat-error>
+            </mat-form-field>
+
+          </div>
+        </div>
+
+
+        <div class="row mb-2">
+          <div class="col-md-12 py-3">
+            <label for="formGroupGender" class="me-2">Gender</label>
+            <mat-radio-group aria-label="Select an option" class="border rounded p-2" formControlName="gender">
+              <mat-radio-button class="p-2" value="M">Male</mat-radio-button>
+              <mat-radio-button class="p-2" value="F">Female</mat-radio-button>
+            </mat-radio-group>
+            <mat-error *ngIf="confirmationPassword?.hasError('required')">
+              Confirmation password is <strong>required</strong>
+            </mat-error>
+          </div>
+        </div>
+
+
+        <div formGroupName="address">
+
+          <div class="row mb-2">
+            <div class="col-md-12">
+              <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+                <mat-label>Address line 1</mat-label>
+                <input type="text" matInput formControlName="address_line_1"
+                       placeholder="Enter your password">
+                        <mat-error *ngIf="addressLine1?.hasError('required')">
+                          Address line 1 is <strong>required</strong>
+                        </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-md-12">
+              <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+                <mat-label>Address line 2 (Optional)</mat-label>
+                <input type="text" matInput formControlName="address_line_2"
+                       placeholder="Enter your password">
+              </mat-form-field>
+            </div>
+          </div>
+
+
+          <div class="row mb-2">
+            <div class="col-md-4">
+              <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+                <mat-label>City</mat-label>
+                <input type="text" matInput formControlName="city"
+                       placeholder="Enter your city">
+                        <mat-error *ngIf="city?.hasError('required')">
+                          City is <strong>required</strong>
+                        </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+                <mat-label>State</mat-label>
+                <mat-select formControlName="state" required>
+                  <mat-option>--</mat-option>
+                  <mat-option [value]="'test'">
+
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="state?.hasError('required')">Please select a state</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-4">
+              <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+                <mat-label>Postcode</mat-label>
+                <input type="number" matInput formControlName="postcode"
+                       placeholder="Enter your postcode">
+                      <mat-error *ngIf="postcode?.hasError('min') || postcode?.hasError('max') && !postcode?.hasError('required')">
+                        Postcode length must be 5
+                        </mat-error>
+                        <mat-error *ngIf="postcode?.hasError('required')">
+                          Postcode is <strong>required</strong>
+                        </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password"
+                   placeholder="Enter your password">
+                    <mat-error *ngIf="password?.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+          </mat-form-field>
+
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field class="height-sm w-100" appearance="outline" floatLabel="always">
+            <mat-label>Confirm password</mat-label>
+            <input type="password" matInput formControlName="confirmation_password"
+                   placeholder="Confirm your password">
+                    <mat-error *ngIf="confirmationPassword?.hasError('required')">
+                      Confirmation password is <strong>required</strong>
+                    </mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="float-end">
+        <button [disabled]="isButtonLoading" mat-raised-button color="primary" class="float-end" (click)="register($event)">
+          <span *ngIf="isButtonLoading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Register</button>
+      </div>
+    </form>
+<!--  </div>-->
+<!--</div>-->
+
+
+

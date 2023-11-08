@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   length = 50;
   pageSize = 10;
   pageIndex = 0;
-  pageSizeOptions = [5, 10, 25];
+  pageSizeOptions = [10, 25, 50];
 
   hidePageSize = false;
   showPageSizeOptions = true;
@@ -22,6 +22,17 @@ export class ProductListComponent implements OnInit {
   disabled = false;
 
   pageEvent?: PageEvent;
+
+  panelOpenState = false;
+
+  brands = [{id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},{id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'},{id:1,name:'Brand'},{id:2,name:'123'},
+    {id:1,name:'Brand'},{id:2,name:'123'}];
 
   products:any[] = [
     {name:'testingggg',price:1233333,description:'hello,'},
@@ -34,13 +45,13 @@ export class ProductListComponent implements OnInit {
     {name:'testingggg',price:1233333,description:'hello,'},
   ]
 
-  products$:Observable<any> = new Observable<any>();
+  productInfo$:Observable<any> = new Observable<any>();
 
   constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
-    //this.productService.findAll({params:new HttpParams().set("page",1).set("size",5)});
-    this.products$ = this.productService.findAll(new HttpParams().set("page",0).set("size",5));
+    this.getProducts(this.pageIndex,this.pageSize);
+    // this.productInfo$ = this.productService.findAll({params:new HttpParams().set("page",).set("page_size",2)});
   }
 
   handlePage(event:PageEvent){
@@ -49,7 +60,17 @@ export class ProductListComponent implements OnInit {
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
 
+    this.getProducts(this.pageIndex,this.pageSize);
+    console.log(this.pageIndex);
+    console.log(this.pageSize);
 
   }
 
+  getProducts(page:number,pageSize:number){
+    this.productInfo$ = this.productService.findAll({params:new HttpParams().set("page",page).set("page_size",pageSize)});
+  }
+
+  addToCart(id:number) {
+    console.log(id);
+  }
 }
